@@ -4,8 +4,9 @@ let res = [
   db.createCollection('bills'),
 //   db.container.createIndex({ myfield: 1 }, { unique: true }),
 db.registros.createIndex({ "accountID": 1 }),
+db.registros.createIndex({ "bankTranList.statements.fitID": 1 }),
   // db.registros.createIndex({ "timeStampStartSchedule" : -1 }),
-  db.bills.insert({ timeStampStartSchedule: '2001-01-01T01:01:01.001Z', schedule: 'db_start' })
+db.bills.insert({ timeStampStartSchedule: '2001-01-01T01:01:01.001Z', schedule: 'db_start' })
   // db.statements.deleteOne()
 
 ]
